@@ -7,7 +7,8 @@
 
 body {
     position: relative;
-    margin: 0;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
 }
 
 .container::after {
@@ -230,7 +231,6 @@ li {
     flex-direction: column;
     margin-top: 400px;
     width: 100%;
-    background-color: white;
 }
 
 .Destinations h3, .discover-title {
@@ -265,8 +265,9 @@ li {
 }
 
 .eiffel-image, .liberty-image, .dubai-image {
-    width: 30%;
-    height: 100%;
+    width: 27%;
+    height: 620px;
+    position: relative;
 }
 
 .star {
@@ -280,4 +281,23 @@ li {
 
 .khalifa-container, .liberty-container, .paris-container {
     background-color: #ffffff;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.paris, .new-york, .dubai {
+    color: #39439A;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.khalifa, .eiffel, .statue {
+    font-family: Titan One;
+    text-transform: uppercase;
+    color: #213641;
+    font-size: 40px;
+    margin: 0;
 }
