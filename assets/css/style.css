@@ -896,7 +896,26 @@ input[type="submit"]:hover {
     background-color: #FFFFFF;
 }
 
+body {
+    background-color: tomato;
+}
 
+/* TABLETTES */
+@media screen and (max-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+}
+
+
+/* MOBILES */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: green;
+    }
+}
+
+/* 
 @media screen and (max-width: 768px) {
     .container::after {
         background-position: 50% 10%;
@@ -1262,6 +1281,10 @@ input[type="submit"]:hover {
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        background-color: tomato;
+    }
+
     .container::after {
         height: 11%;
         background-position: 50%;
@@ -1411,3 +1434,9 @@ input[type="submit"]:hover {
         display: none;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+} */
