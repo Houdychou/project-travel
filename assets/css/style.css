@@ -10,6 +10,7 @@
 body {
     position: relative;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .container::after {
@@ -896,7 +897,7 @@ input[type="submit"]:hover {
     background-color: #FFFFFF;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 660px) {
     .container::after {
         background-position: 50% 10%;
         height: 10%;
@@ -1257,4 +1258,158 @@ input[type="submit"]:hover {
     .Contact-us {
         margin: 0;
     }
+}
+
+@media screen and (max-width: 1600px) {
+    
+    .container::after {
+        height: 11%;
+        background-position: 50%;
+    }
+    
+    .navtop {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        border-bottom: 2px solid #6E86E6;
+        background-color: #213641;
+        z-index: 1;
+        margin-top: 0;
+        top: -10px;
+    }
+
+    .navbar h3 {
+        width: 70%;
+    }
+
+    .navbar p {
+        width: 56%;
+    }
+
+    .Destinations p {
+        width: 50%;
+    }
+
+    .Ideas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .idea1,
+    .idea2,
+    .idea3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Ideas h4 {
+        width: 100%;
+        font-size: 21px;
+    }
+
+    .idea2 .people {
+        left: 65px;
+    }
+
+    .Ideas img {
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 5px;
+    }
+
+    .txt2 {
+        border-bottom-left-radius: 10px ;
+        border-bottom-right-radius: 10px ;
+    }
+
+    .txt1, .txt2, .Ideas img {
+        width: 426px;
+    }
+
+    .antorno {
+        display: none;
+    }
+
+    .photo2 img {
+        display: none;
+    }
+
+    .gaspé {
+        display: none;
+    }
+
+    .photos-txt h3 {
+        font-size: 45px;
+    }
+
+    .photos-txt p {
+        width: 90%;
+    }
+
+    #carousel-right {
+        position: absolute;
+        right: 50px;
+    }
+
+    #carousel-left {
+        position: absolute;
+        left: 50px;
+    }
+
+    .txt {
+        margin: 0;
+    }
+
+    .Contact a {
+        margin:0;
+        font-size: 20px;
+    }
+    
+    .txt h3 {
+        font-size: 40px;
+    }
+
+    .txt .business {
+        width: 100%;
+    }
+
+    .travel {
+        width: 36%;
+        margin-left: 33px;
+    }
+
+    .Contact-us {
+        margin: 60px 0px 0px 149px;
+        width: 40%;
+    }
+
+    form {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    header p {
+        margin-left: 63px;
+    }
+
+    .navtop .fa-bars {
+            color: #434dbf;
+            background-color: #eff5fe;
+            padding: 12px;
+            border-radius: 50%;
+            font-size: 25px;
+            display: inline;
+    }
+
+    .navtop .fa-magnifying-glass {
+        display: none;
+    }
+
+    
 }
