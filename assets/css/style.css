@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
 }
 
+.newyork {
+    display: none;
+}
+
 .container::after {
     content: "";
     position: absolute;
@@ -713,7 +717,7 @@ span {
 .Contact {
     margin-top: 10px;
     color: white;
-    height: 380px;
+    height: 450px;
     background-color: #6E86E6;
     display: flex;
     flex-direction: row;
@@ -749,7 +753,7 @@ span {
 
 .txt .business {
     font-size: 20px;
-    width: 50%;
+    width: 90%;
 }
 
 .action {
@@ -760,7 +764,7 @@ span {
 .txt h3 {
     margin: 0;
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 45px;
 }
 
 .about-us {
@@ -789,7 +793,7 @@ span {
 form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
 }
 
@@ -886,7 +890,7 @@ input[type="submit"]:hover {
 }
 
 .Contact-us {
-    margin: 90px 0px 0px 105px;
+    margin: 40px 0px 0px 30px;
 }
 
 .black {
@@ -896,22 +900,547 @@ input[type="submit"]:hover {
     background-color: #FFFFFF;
 }
 
-body {
-    background-color: tomato;
-}
-
 /* TABLETTES */
 @media screen and (max-width: 1024px) {
-    body {
-        background-color: blue;
+    .container::after {
+        height: 11%;
+        background-position: 50%;
+    }
+    
+    .navtop {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        border-bottom: 2px solid #6E86E6;
+        background-color: #213641;
+        z-index: 1;
+        margin-top: 0;
+        top: -10px;
+    }
+
+    .navbar h3 {
+        width: 70%;
+    }
+
+    .navbar p {
+        width: 56%;
+    }
+
+    .Destinations p {
+        width: 50%;
+    }
+
+    .Ideas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .idea1,
+    .idea2,
+    .idea3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Ideas h4 {
+        width: 100%;
+        font-size: 21px;
+    }
+
+    .idea2 .people {
+        left: 65px;
+    }
+
+    .Ideas img {
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 5px;
+    }
+
+    .txt2 {
+        border-bottom-left-radius: 10px ;
+        border-bottom-right-radius: 10px ;
+    }
+
+    .txt1, .txt2, .Ideas img {
+        width: 426px;
+    }
+
+    .antorno {
+        display: none;
+    }
+
+    .photo2 img {
+        display: none;
+    }
+
+    .gaspé {
+        display: none;
+    }
+
+    .photos-txt h3 {
+        font-size: 45px;
+    }
+
+    .photos-txt p {
+        width: 90%;
+    }
+
+    #carousel-right {
+        border: transparent;
+        color: #434dbf;
+        position: absolute;
+        right: 50px;
+    }
+
+    #carousel-left {
+        border: transparent;
+        color: #434dbf;
+        position: absolute;
+        left: 50px;
+    }
+
+    .txt {
+        margin: 0;
+    }
+
+    .Contact a {
+        margin:0;
+        font-size: 20px;
+    }
+    
+    .txt h3 {
+        font-size: 40px;
+    }
+
+    .txt .business {
+        width: 100%;
+    }
+
+    .travel {
+        width: 36%;
+    }
+
+    form {
+        margin: 40px 0px 0px 50px;
+        width: 70%;
+    }
+
+    header p {
+        margin-left: 63px;
+    }
+
+    .Contact-us {
+        width: 305px;
+        margin: 80px 0px 0px 30px;
+    }
+
+    .navtop .fa-bars {
+            color: #434dbf;
+            background-color: #eff5fe;
+            padding: 12px;
+            border-radius: 50%;
+            font-size: 25px;
+            display: inline;
+    }
+
+    .navtop .fa-magnifying-glass {
+        display: none;
     }
 }
 
 
 /* MOBILES */
 @media screen and (max-width: 768px) {
-    body {
-        background-color: green;
+    .container::after {
+        background-position: 50% 10%;
+        height: 10%;
+    }
+
+    .navtop {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        border-bottom: 2px solid #6E86E6;
+        background-color: #213641;
+        z-index: 1;
+        margin-top: 0;
+        top: -10px;
+    }
+
+    input[type="submit"] {
+        margin-top: 10px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        left: 55px;
+        position: relative;
+    }
+
+    .navbar h3 {
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .navbar p {
+        font-size: 23px;
+        width: 100%;
+    }
+
+    .navtop .fa-bars {
+        bottom: 15px;
+        position: absolute;
+        right: 10px;
+        display: inline-block;
+        color: #434dbf;
+        background-color: #eff5fe;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 25px;
+    }
+
+    .navtop .phone {
+        position: absolute;
+        left: 10px;
+        top: 37px;
+    }
+
+    .navtop p {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .Ideas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .idea1,
+    .idea2,
+    .idea3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Ideas h4 {
+        width: 100%;
+        font-size: 21px;
+    }
+
+    .idea2 .people {
+        left: 65px;
+    }
+
+    .Ideas img {
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 5px;
+        width: 95%;
+    }
+
+    .txt1 {
+        padding-right: 10px;
+        width: 95%;
+    }
+
+    .txt2 {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 95%;
+    }
+
+    .info {
+        width: 330px;
+        bottom: 30px;
+    }
+
+    .Destinations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Destinations h3 {
+        font-size: 45px;
+    }
+
+    .Destinations p {
+        font-size: 21px;
+        width: 100%;
+    }
+
+    .photos-txt {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .photos-txt h3 {
+        text-align: center;
+        font-size: 41px;
+    }
+
+    .photos-txt p {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .photos-main {
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bora {
+        width: 300px;
+    }
+
+    .santa {
+        height: 300px;
+        width: 300px;
+    }
+
+    .photo1,
+    .photo2 {
+        margin-left: 0;
+    }
+
+    .photo2 img {
+        display: none;
+    }
+
+    .img3 img {
+        display: none;
+    }
+
+    .img4 img {
+        display: none;
+    }
+
+    .container-destination {
+        position: relative;
+    }
+
+    .first-destination {
+        width: 90%;
+        margin-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first-destination img {
+        height: 400px;
+        width: 90%;
+    }
+
+    .star {
+        position: relative;
+        right: -80px;
+        bottom: 160px;
+    }
+
+    #carousel-right,
+    #carousel-left {
+        border: 1px solid white;
+        color: white;
+        position: absolute;
+        text-align: center;
+        top: 140px;
+        width: 15%;
+    }
+
+    #carousel-left {
+        left: 30px;
+    }
+
+    #carousel-right {
+        right: 30px;
+    }
+
+    .eiffel {
+        font-size: 20px;
+    }
+
+    .paris-txt {
+        margin: 0;
+    }
+
+    .paris-container {
+        left: 0px;
+        bottom: 175px;
+        width: 85%;
+        position: relative;
+    }
+
+    .txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .txt h3 {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .txt .action {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .txt .business {
+        text-align: center;
+        width: 100%;
+    }
+
+    .Contact a {
+        margin: 10px 0px 30px 0px;
+        padding: 5px;
+    }
+
+    .Contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .Contact-us {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .Contact-us span {
+        padding: 0;
+    }
+
+    .about-us {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .travel {
+        width: 90%;
+    }
+
+    .white-hidden {
+        background-color: white;
+        margin-right: 10px;
+        height: 1px;
+        width: 100%;
+    }
+
+    .credit {
+        width: 90%;
+        margin-left: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        position: relative;
+        right: 55px;
+    }
+
+    footer i {
+        position: relative;
+        margin-right: 5px;
+        font-size: 30px;
+    }
+
+    .Hollywood {
+        margin-left: 32px;
+    }
+
+    .fa-phone {
+        top: 5px;
+    }
+
+    .mail i {
+        top: 10px;
+    }
+
+    .endroit i {
+        top: 3px;
+    }
+
+    #email {
+        border-radius: 20px;
+    }
+
+    .blanc {
+        width: 175px;
+        margin-left: 40px;
+    }
+
+    .authors {
+        width: 100%;
+        margin: 0px 0px 30px 20px;
+    }
+
+    .blue {
+        width: 90px;
+    }
+
+    .p1 {
+        width: 100%;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    form {
+        position: relative;
+        left: 20px;
+        width: 400px;
+    }
+
+    .endroit {
+        width: 100%;
+    }
+
+    .endroit span {
+        width: 70%;
+        margin: 0px 100px 30px 0px;
+    }
+
+    .Contact-us {
+        width: 100%;
+        margin: 0;
     }
 }
 

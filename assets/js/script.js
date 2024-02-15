@@ -2,22 +2,40 @@ const form = document.querySelector('form');
 const message = document.querySelector('.hidden')
 const email = document.querySelector('#email');
 const btn = document.querySelector('.button');
-
-const carouselRight = document.querySelector('#carousel-right')
+const carouselImg = document.querySelector('.eiffel-image');
+const titreCarousel = document.querySelector('.paris');
+const endroitCarousel = document.querySelector('.eiffel');
+const txtCarousel = document.querySelector('.paris-txt');
+const carouselRight = document.querySelector('#carousel-right');
+const carouselLeft = document.querySelector('#carousel-left');
+const stars = document.querySelector('.star');
+const firstDestination = document.querySelector('.first-destination');
 
 function handleCarousel() {
-    const firstDestination = document.querySelector('.first-destination')
-
-    firstDestination.querySelector('.eiffel-image').setAttribute('src', 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flepassetempsderose.l.e.pic.centerblog.net%2Fo%2F0b6fb387.jpg&f=1&nofb=1&ipt=4f1abd79613c95390c05177932fc00746ba1451a4f4200edfcebdd3de9a8d01c&ipo=images')
+    firstDestination.querySelector('.eiffel-image').setAttribute('src', 'assets/img/newyork.jpg')
+    titreCarousel.textContent = "New-York";
+    endroitCarousel.textContent = "Liberty Statue";
+    endroitCarousel.style.marginBottom = "0px";
+    txtCarousel.textContent = "Icon of freedom and hope, majestic, welcomes the world.";
 }
 
+function prevImg() {
+    firstDestination.querySelector('.newyork').setAttribute('src', 'assets/img/tour-eiffel.jpg');
+    titreCarousel.textContent = "Paris";
+    endroitCarousel.textContent = "Eiffel Tower";
+    endroitCarousel.style.marginBottom = "34px";
+    txtCarousel.textContent = "One of the most famous landmarks in the world";
+}
 
 carouselRight.addEventListener('click', function() {
-    handleCarousel()
+    handleCarousel();
 })
 
+carouselLeft.addEventListener('click', function() {
+    prevImg();
+})
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault()
     message.classList.remove('add');
     message.textContent = "";
@@ -27,7 +45,7 @@ form.addEventListener('submit', function(e) {
     email.style.border = "3px solid lightgreen";
     btn.style.backgroundColor = "green";
 
-    if(email.value == "") {
+    if (email.value == "") {
         message.classList.remove('hidden');
         message.textContent = "Ce champ ne peut pas être vide!";
         message.style.color = "red";
@@ -36,7 +54,7 @@ form.addEventListener('submit', function(e) {
         email.style.border = "3px solid red";
         btn.style.color = "white";
         btn.style.backgroundColor = "darkred";
-    } else if(email.value.indexOf('@') == -1 || email.value.indexOf('@') < 3) {
+    } else if (email.value.indexOf('@') == -1 || email.value.indexOf('@') < 3) {
         message.classList.remove('hidden');
         message.textContent = "L'adresse e-mail doit contenir au moins 3 caractères avant le '@'!";
         message.style.color = "red";
