@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
-
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -897,7 +896,8 @@ input[type="submit"]:hover {
     background-color: #FFFFFF;
 }
 
-@media screen and (max-width: 660px) {
+
+@media screen and (max-width: 768px) {
     .container::after {
         background-position: 50% 10%;
         height: 10%;
@@ -918,6 +918,7 @@ input[type="submit"]:hover {
     }
 
     .glass {
+        display: inline-block;
         bottom: 15px;
         position: absolute;
         left: 10px;
@@ -1260,8 +1261,7 @@ input[type="submit"]:hover {
     }
 }
 
-@media screen and (max-width: 1600px) {
-    
+@media screen and (min-width: 768px) {
     .container::after {
         height: 11%;
         background-position: 50%;
@@ -1410,6 +1410,4 @@ input[type="submit"]:hover {
     .navtop .fa-magnifying-glass {
         display: none;
     }
-
-    
 }
