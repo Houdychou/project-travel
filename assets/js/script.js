@@ -17,9 +17,7 @@ const navbarList = document.querySelector('.nav ul');
 const firstDestination = document.querySelector('.first-destination');
 const responsiveNav = document.querySelector('.fa-bars');
 const closeButton = document.querySelector('.close-button');
-
 const IMAGES = [
-
     {
         "src": "assets/img/tour-eiffel.jpg",
         "city-name": "Paris",
@@ -90,8 +88,8 @@ responsiveNav.addEventListener('click', function () {
         nav.style.top = "";
         nav.style.right = "";
         nav.style.width = "";
+        navbar.style.opacity = "1";
         navtop.style.zIndex = "";
-        navbar.style.opacity = "";
         contact.style.marginRight = "";
         navbarList.style.display = "";
         navbarList.style.marginTop = "";
@@ -139,3 +137,4 @@ form.addEventListener('submit', function (e) {
         btn.style.backgroundColor = "darkred";
     }
 })
+
