@@ -206,6 +206,10 @@ a {
     border-radius: 20px;
 }
 
+.fa-xmark {
+    display: none;
+}
+
 .navbar .Book {
     font-family: AbeeZee;
     padding: 13px;
@@ -613,6 +617,7 @@ span {
     height: 580px;
     width: 550px;
     position: relative;
+    transition: transform 0.5s ease;
     z-index: -1;
     border-radius: 30px;
 }
@@ -906,7 +911,7 @@ input[type="submit"]:hover {
         height: 11%;
         background-position: 50%;
     }
-    
+
     .navtop {
         width: 100%;
         display: flex;
@@ -923,6 +928,10 @@ input[type="submit"]:hover {
 
     .navbar h3 {
         width: 70%;
+    }
+
+    .photos-main {
+        margin: 0;
     }
 
     .navbar p {
@@ -1014,6 +1023,10 @@ input[type="submit"]:hover {
         margin:0;
         font-size: 20px;
     }
+
+    .fa-xmark {
+        display: none;
+    }    
     
     .txt h3 {
         font-size: 40px;
@@ -1036,9 +1049,18 @@ input[type="submit"]:hover {
         margin-left: 63px;
     }
 
+    .photo1 {
+        margin-left: 60px;
+    }
+
     .Contact-us {
         width: 305px;
         margin: 80px 0px 0px 30px;
+    }
+
+    .santa,.bora {
+        height: 450px;
+        width: 450px;
     }
 
     .navtop .fa-bars {
@@ -1047,6 +1069,7 @@ input[type="submit"]:hover {
             padding: 12px;
             border-radius: 50%;
             font-size: 25px;
+            cursor: pointer;
             display: inline;
     }
 
@@ -1087,6 +1110,10 @@ input[type="submit"]:hover {
         position: relative;
     }
 
+    .close {
+        display: none;
+    }    
+
     .navbar h3 {
         font-size: 40px;
         width: 100%;
@@ -1105,8 +1132,13 @@ input[type="submit"]:hover {
         color: #434dbf;
         background-color: #eff5fe;
         padding: 12px;
+        cursor: pointer;
         border-radius: 50%;
         font-size: 25px;
+    }
+
+    .nav {
+        height: 0px;
     }
 
     .navtop .phone {
@@ -1116,10 +1148,6 @@ input[type="submit"]:hover {
     }
 
     .navtop p {
-        display: none;
-    }
-
-    .nav {
         display: none;
     }
 
@@ -1212,11 +1240,7 @@ input[type="submit"]:hover {
         align-items: center;
     }
 
-    .bora {
-        width: 300px;
-    }
-
-    .santa {
+    .santa,.bora {
         height: 300px;
         width: 300px;
     }
