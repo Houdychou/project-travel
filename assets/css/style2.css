@@ -12,18 +12,10 @@ body {
     position: relative;
     margin: 0;
     overflow-x: hidden;
-}   
-
-.navtop {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
 }
 
-.navtop .fa-bars {
-    display: none;
+main {
+    margin-top: 130px;
 }
 
 nav {
@@ -38,17 +30,11 @@ nav {
     padding-right: 16px;
 }
 
-.nav {
-    height: 100px;
-    display: flex;
-    align-items: center;
-}
-
 nav ul {
     display: flex;
 }
 
-.nav li {
+nav li {
     text-decoration: none;
     color: white;
     margin-right: 22px;
@@ -56,18 +42,13 @@ nav ul {
     text-transform: uppercase;
 }
 
-.nav li:nth-child(6) {
-    margin-right: auto;
-}
-
-.nav li a {
+nav li a {
     -webkit-transition: 1s ease;
     color: #213641;
     text-decoration: none;
 }
 
-
-.nav .Book {
+nav .Book {
     font-family: AbeeZee;
     padding: 13px;
     color: white;
@@ -75,7 +56,7 @@ nav ul {
     background-color: #6E86E6;
 }
 
-.nav .Book:hover {
+nav .Book:hover {
     color: #39439a;
     transition: 1s ease;
     background-color: transparent;
@@ -98,7 +79,7 @@ main {
     align-items: center;
     flex-direction: column;
 }
- 
+
 label {
     display: block;
 }
@@ -111,7 +92,12 @@ form {
     margin-bottom: 20px;
 }
 
-.cordonne, .for, .requests, .write-requests, .arrival, .estimated {
+.cordonne,
+.for,
+.requests,
+.write-requests,
+.arrival,
+.estimated {
     font-weight: 1000;
     font-size: 20px;
     margin-top: 0;
@@ -122,7 +108,8 @@ form {
     margin-bottom: 20px;
 }
 
-.confi, .reservation {
+.confi,
+.reservation {
     font-size: 13px;
     margin-top: 3px;
 }
@@ -132,7 +119,8 @@ form {
     border-radius: 5px;
 }
 
-.principal, .other {
+.principal,
+.other {
     display: inline;
 }
 
@@ -144,7 +132,8 @@ input[type="checkbox"] {
     margin-bottom: 10px;
 }
 
-.write-requests, .estimated {
+.write-requests,
+.estimated {
     margin-bottom: 10px;
 }
 
@@ -152,7 +141,7 @@ input[type="checkbox"] {
     display: inline;
 }
 
-.fa-solid {
+.fa-check, .fa-bars, .fa-person-military-pointing {
     font-size: 20px;
     margin-right: 10px;
     border: 3px #6e86e6 solid;
@@ -161,12 +150,22 @@ input[type="checkbox"] {
     background-color: #c1cbf4;
 }
 
+.fa-circle-xmark {
+    font-size: 50px;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
 select {
     width: 60%;
     font-size: 15px;
 }
 
-select, input[type="text"], input[type="number"], input[type="email"] {
+select,
+input[type="text"],
+input[type="number"],
+input[type="email"] {
     padding: 8px;
     border-radius: 5px;
     font-size: 15px;
@@ -190,42 +189,47 @@ select, input[type="text"], input[type="number"], input[type="email"] {
     padding-top: 10px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     form {
-        width: 85%;
+        width: 50%;
     }
 
     nav li:nth-child(6) {
+        margin-right: auto;
+    }
+
+    #burger-menu {
+        display: none;
+    }
+
+    #close {
         display: none;
     }
 
     nav {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        height: 80px;
         border-bottom: 2px solid #6E86E6;
         z-index: 1;
         margin-top: 0;
     }
 
-    .Book {
-        display: none;
-    }
-
-    ul li{
+    ul li {
         color: white;
     }
 }
-    
-@media screen and (max-width: 661px) {
+
+@media screen and (max-width: 1024px) {
     form {
-        width: 90%;
+        width: 70%;
     }
 
-    main {
-        margin-top: 100px;
+    #burger-menu {
+        display: none;
+    }
+
+    #close {
+        display: none;
     }
 
     .stay {
@@ -233,18 +237,20 @@ select, input[type="text"], input[type="number"], input[type="email"] {
     }
 
     nav {
-        height: 190px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100px;
         width: 100%;
         border-bottom: 2px solid #6E86E6;
         z-index: 1;
     }
 
     ul {
-        margin-top: 40px;
-        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        display: flex;
     }
 
     li {
@@ -256,11 +262,34 @@ select, input[type="text"], input[type="number"], input[type="email"] {
     }
 
     .Book {
-       display: none;
+        display: none;
     }
 
-    ul li{
+    ul li {
         color: white;
     }
 }
-    
+
+
+@media screen and (max-width: 655px) {
+    form {
+        width: 90%;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #burger-menu {
+        display: block;
+    }
+
+    #close {
+        display: none;
+    }
+}

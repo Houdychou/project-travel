@@ -16,7 +16,6 @@ const carouselLeft = document.querySelector('#carousel-left');
 const navbarList = document.querySelector('.nav ul');
 const firstDestination = document.querySelector('.first-destination');
 const responsiveNav = document.querySelector('.fa-bars');
-const closeButton = document.querySelector('.close-button');
 const IMAGES = [
     {
         "src": "assets/img/tour-eiffel.jpg",
