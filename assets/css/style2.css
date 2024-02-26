@@ -195,6 +195,10 @@ select, input[type="text"], input[type="number"], input[type="email"] {
         width: 85%;
     }
 
+    nav li:nth-child(6) {
+        display: none;
+    }
+
     nav {
         width: 100%;
         display: flex;

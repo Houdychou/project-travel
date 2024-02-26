@@ -103,7 +103,7 @@ responsiveNav.addEventListener('click', function () {
         li[3].style.paddingBottom = "";
         li[4].style.paddingBottom = "";
         li[5].style.paddingBottom = "";
-        navOpen = false; // Mettre à jour l'état de la navigation
+        navOpen = false;
     }
 });
 
