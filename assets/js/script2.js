@@ -16,46 +16,81 @@ const ul = document.querySelector('ul');
 const li = document.querySelectorAll('.nav-items');
 const burgerMenu = document.querySelector('.fa-bars');
 const croix = document.querySelector('#close');
-
+function emailError() {
+    emailPattern
+    if (email.value === "") {
+        email.style.borderColor = "red"
+        labelEmail.style.color = "red"
+        return true
+    }
+    else {
+        email.style.borderColor = "#4EE1A0"
+        labelEmail.style.color = "#4EE1A0"
+        return false
+    }
+}
+function emailPattern() {
+    if (pattern.test(email.value)) {
+        email.style.borderColor = "#4EE1A0"
+        labelEmail.style.color = "#4EE1A0"
+        return false
+    }
+    else {
+        email.style.borderColor = "red"
+        labelEmail.style.color = "red"
+        return true
+    }
+}
+function specialRequestsError() {
+    if (messageTextarea.value === "") {
+        messageTextarea.style.borderColor = "red"
+        writeRequests.style.color = "red"
+        return true
+    }
+    else {
+        messageTextarea.style.borderColor = "#4EE1A0"
+        writeRequests.style.color = "#4EE1A0"
+        return false
+    }
+}
+function numberError () {
+    if (number.value === "") {
+        number.style.borderColor = "red"
+        labelNumber.style.color = "red"
+        return true
+    }
+    else {
+        number.style.borderColor = "#4EE1A0"
+        labelNumber.style.color = "#4EE1A0"
+        return false
+    }
+}
+function nameError() {
+    if (nameTextarea.value === "") {
+        nameTextarea.style.borderColor = "red"
+        labelName.style.color = "red"
+        return true
+    }
+    else {
+        nameTextarea.style.borderColor = "#4EE1A0"
+        labelName.style.color = "#4EE1A0"
+        return false
+    }
+}
 confirm.addEventListener("click", function (e) {
     e.preventDefault();
-    if (email.value === "") {
-        email.style.borderColor = "red";
-        labelEmail.style.color = "red";
+    const emailHasError = emailError()
+    const specialRequestsHasError = specialRequestsError()
+    const numberHasError = numberError()
+    const nameHasError = nameError()
+    const emailHasPattern = emailPattern()
+    const emailPattern = emailPattern()
+    if (emailHasError === false && specialRequestsHasError === false && numberHasError === false && nameHasError === false && emailHasPattern && emailPattern === false) {
+        container.style.filter = "blur(2px)"
+        notif.style.display = "inline"
     }
-    else {
-        email.style.borderColor = "#4EE1A0";
-        labelEmail.style.color = "#4EE1A0";
-    }
+});
 
-    if (messageTextarea.value === "") {
-        messageTextarea.style.borderColor = "red";
-        writeRequests.style.color = "red";
-    }
-    else {
-        messageTextarea.style.borderColor = "#4EE1A0";
-        writeRequests.style.color = "#4EE1A0";
-    }
-
-    if (number.value === "") {
-        number.style.borderColor = "red";
-        labelNumber.style.color = "red";
-
-    }
-    else {
-        number.style.borderColor = "#4EE1A0";
-        labelNumber.style.color = "#4EE1A0";
-    }
-
-    if (nameTextarea.value === "") {
-        nameTextarea.style.borderColor = "red";
-        labelName.style.color = "red";
-    }
-    else {
-        nameTextarea.style.borderColor = "#4EE1A0";
-        labelName.style.color = "#4EE1A0";
-    }
-})
 burgerMenu.addEventListener('click', function() {
         nav.style.position = "fixed";
         nav.style.height = "290px";
