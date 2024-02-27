@@ -58,8 +58,8 @@ confirm.addEventListener("click", function (e) {
 })
 burgerMenu.addEventListener('click', function() {
         nav.style.position = "fixed";
-        nav.style.height = "250px";
-        ul.style.marginTop = "45px";
+        nav.style.height = "290px";
+        ul.style.marginTop = "50px";
         for (let i = 0; i < li.length; i++) {
             li[i].style.position = "relative";
             li[i].style.top = "5px";
@@ -70,13 +70,13 @@ burgerMenu.addEventListener('click', function() {
         burgerMenu.style.display = "none";
         croix.style.display = "block";
         croix.style.position = "relative";
-        croix.style.bottom = "20px";
+        croix.style.bottom = "25px";
 })
 
 croix.addEventListener('click', function() {
         nav.style.position = "initial";
         nav.style.height = "100px";
-        ul.style.marginTop = "0";
+        ul.style.marginTop = "0px";
         li.forEach(item => {
             item.style.position = "relative";
             item.style.top = "0px";

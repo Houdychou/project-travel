@@ -37,13 +37,20 @@ const IMAGES = [
         "endroit-carrousel": "Liberty Statue",
         "description": "Icon of freedom and hope, majestic, welcomes the world."
     },
+    {
+        "src": "assets/img/pyramid.png",
+        "city-name": "Cairo",
+        "endroit-carrousel": "Pyramid",
+        "description": "Iconic structures, ancient wonders, monumental tombs, architectural marvels in Egypt.",
+    }
 ]
 let currentImageIndex = 0;
+
 function handleCarousel(direction) {
     if (direction === carouselLeft) {
-        currentImageIndex = (currentImageIndex - 1 + IMAGES.length) % IMAGES.length;
-    } else {
         currentImageIndex = (currentImageIndex + 1) % IMAGES.length;
+    } else {
+        currentImageIndex = (currentImageIndex - 1 + IMAGES.length) % IMAGES.length;
     }
     const currentImage = IMAGES[currentImageIndex];
     console.log(currentImage);
@@ -53,10 +60,9 @@ function handleCarousel(direction) {
     txtCarousel.textContent = currentImage.description;
 }
 
-carouselRight.addEventListener('click', handleCarousel);
+carouselRight.addEventListener('click', () => handleCarousel(carouselRight));
 
-carouselLeft.addEventListener('click', handleCarousel);
-
+carouselLeft.addEventListener('click', () => handleCarousel(carouselLeft));
 let navOpen = false;
 responsiveNav.addEventListener('click', function () {
     if (!navOpen) {
