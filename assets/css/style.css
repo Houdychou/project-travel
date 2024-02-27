@@ -495,11 +495,7 @@ span {
 
 .photo2 {
     cursor: pointer;
-    position: relative;
     margin-left: 50px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .santa {
@@ -524,24 +520,9 @@ span {
     position: relative;
 }
 
-.img1:hover .desc-wrapper {
-    display: flex;
-}
-
 .img2 {
     position: relative;
     cursor: pointer;
-}
-
-.img2:hover .desc-wrapper {
-    top: 20px;
-    height: 93%;
-    display: flex;
-}
-
-.photo2:hover .desc-wrapper {
-    height: 823px;
-    display: flex;
 }
 
 .img3 {
@@ -549,54 +530,26 @@ span {
     position: relative;
 }
 
-.img3:hover .desc-wrapper {
-    width: 83%;
-    left: 50px;
-    display: flex;
-}
-
 .img4 {
     cursor: pointer;
     position: relative;
 }
 
-.img4:hover .desc-wrapper {
-    top: 20px;
-    height: 300px;
-    width: 83.5%;
-    left: 50px;
-    display: flex;
-}
-
-.desc-wrapper p {
-    -webkit-transition: 0.3s ease;
-    text-decoration: none;
-    color: #FFF;
-    text-transform: uppercase;
-}
-
-.desc-wrapper p:hover {
-    transition: 0.5s ease-in;
-    color: yellow;
-}
-
-.desc-wrapper {
-    transition: 1s ease;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.349);
-    display: none;
-    flex-direction: column;
-    height: 98%;
-    border-radius: 10px;
-    justify-content: center;
-    left: 0;
-    list-style: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-left: 0;
-    position: absolute;
-    top: 0;
+#lightbox {
+    position: fixed;
     width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-left: 755px
 }
 
 .photo2 img {

@@ -16,8 +16,11 @@ const ul = document.querySelector('ul');
 const li = document.querySelectorAll('.nav-items');
 const burgerMenu = document.querySelector('.fa-bars');
 const croix = document.querySelector('#close');
+const container = document.querySelector(".container3")
+const notif = document.querySelector(".notif")
+const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 function emailError() {
-    emailPattern
     if (email.value === "") {
         email.style.borderColor = "red"
         labelEmail.style.color = "red"
@@ -29,6 +32,7 @@ function emailError() {
         return false
     }
 }
+
 function emailPattern() {
     if (pattern.test(email.value)) {
         email.style.borderColor = "#4EE1A0"
@@ -41,6 +45,7 @@ function emailPattern() {
         return true
     }
 }
+
 function specialRequestsError() {
     if (messageTextarea.value === "") {
         messageTextarea.style.borderColor = "red"
@@ -53,6 +58,7 @@ function specialRequestsError() {
         return false
     }
 }
+
 function numberError () {
     if (number.value === "") {
         number.style.borderColor = "red"
@@ -65,6 +71,7 @@ function numberError () {
         return false
     }
 }
+
 function nameError() {
     if (nameTextarea.value === "") {
         nameTextarea.style.borderColor = "red"
@@ -79,14 +86,14 @@ function nameError() {
 }
 confirm.addEventListener("click", function (e) {
     e.preventDefault();
-    const emailHasError = emailError()
-    const specialRequestsHasError = specialRequestsError()
-    const numberHasError = numberError()
-    const nameHasError = nameError()
-    const emailHasPattern = emailPattern()
-    const emailPattern = emailPattern()
-    if (emailHasError === false && specialRequestsHasError === false && numberHasError === false && nameHasError === false && emailHasPattern && emailPattern === false) {
-        container.style.filter = "blur(2px)"
+    let emailHasError = emailError()
+    let specialRequestsHasError = specialRequestsError()
+    let numberHasError = numberError()
+    let nameHasError = nameError()
+    let emailHasPattern = emailPattern()
+
+    if (specialRequestsHasError === false && numberHasError === false && nameHasError === false && emailHasPattern && emailHasError === true) {
+        container.style.filter = "blur(2px)";
         notif.style.display = "inline"
     }
 });

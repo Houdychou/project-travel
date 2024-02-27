@@ -16,6 +16,12 @@ const carouselLeft = document.querySelector('#carousel-left');
 const navbarList = document.querySelector('.nav ul');
 const firstDestination = document.querySelector('.first-destination');
 const responsiveNav = document.querySelector('.fa-bars');
+const lightbox = document.createElement('div');
+const images = document.querySelectorAll('.thumbnail')
+
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox)
+
 const IMAGES = [
     {
         "src": "assets/img/tour-eiffel.jpg",
@@ -45,6 +51,23 @@ const IMAGES = [
     }
 ]
 let currentImageIndex = 0;
+
+images.forEach(image => {
+    image.addEventListener('click', e => {
+        lightbox.classList.add('active')
+        const img = document.createElement('img')
+        img.src = image.src
+        while (lightbox.firstChild) {
+            lightbox.removeChild(lightbox.firstChild)
+        }
+        lightbox.appendChild(img)
+    })
+})
+
+lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active')
+})
 
 function handleCarousel(direction) {
     if (direction === carouselLeft) {
@@ -141,5 +164,6 @@ form.addEventListener('submit', function (e) {
         btn.style.color = "white";
         btn.style.backgroundColor = "darkred";
     }
-})
+});
+
 
