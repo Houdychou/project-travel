@@ -554,8 +554,8 @@ span {
 
 .lightbox-img {
     border-radius: 3px;
-    height: 650px;
-    width: 500px;
+    height: 850px;
+    width: 700px;
 }
 
 .photo2 img {
@@ -871,6 +871,33 @@ input[type="submit"]:hover {
     border: 3px solid red;
 }
 
+.nav-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 180px;
+    height: 270px;
+    right: 0px;
+    top: 100px;
+}
+
+.nav-open ul {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-open .Book {
+    display: none;
+}
+
+.nav-open li {
+    padding-top: 10px;
+}
+
 /* TABLETTES */
 @media screen and (max-width: 1024px) {
     .container::after {
@@ -1071,7 +1098,6 @@ input[type="submit"]:hover {
     }
 
     h1 {
-        margin-bottom: 10px;
         left: 55px;
         position: relative;
     }

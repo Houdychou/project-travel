@@ -86,6 +86,7 @@ function handleCarousel(direction) {
 carouselRight.addEventListener('click', () => handleCarousel(carouselRight));
 
 carouselLeft.addEventListener('click', () => handleCarousel(carouselLeft));
+
 let navOpen = false;
 responsiveNav.addEventListener('click', function () {
     if (!navOpen) {
