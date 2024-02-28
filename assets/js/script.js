@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const message = document.querySelector('.hidden')
-const email = document.querySelector('#email');
+const email = document.querySelector('.email');
 const btn = document.querySelector('.button');
 const carouselImg = document.querySelector('.eiffel-image');
 const titreCarousel = document.querySelector('.paris');
@@ -20,7 +20,24 @@ const lightbox = document.createElement('div');
 const images = document.querySelectorAll('.thumbnail')
 
 lightbox.id = 'lightbox';
-document.body.appendChild(lightbox)
+document.body.appendChild(lightbox);
+images.forEach(image => {
+    image.addEventListener('click', e => {
+        lightbox.classList.add('active');
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.classList.add('lightbox-img');
+        while (lightbox.firstChild) {
+            lightbox.removeChild(lightbox.firstChild);
+        }
+        lightbox.appendChild(img);
+    })
+})
+
+lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active');
+})
 
 const IMAGES = [
     {
@@ -52,23 +69,6 @@ const IMAGES = [
 ]
 let currentImageIndex = 0;
 
-images.forEach(image => {
-    image.addEventListener('click', e => {
-        lightbox.classList.add('active')
-        const img = document.createElement('img')
-        img.src = image.src
-        while (lightbox.firstChild) {
-            lightbox.removeChild(lightbox.firstChild)
-        }
-        lightbox.appendChild(img)
-    })
-})
-
-lightbox.addEventListener('click', e => {
-    if (e.target !== e.currentTarget) return
-    lightbox.classList.remove('active')
-})
-
 function handleCarousel(direction) {
     if (direction === carouselLeft) {
         currentImageIndex = (currentImageIndex + 1) % IMAGES.length;
@@ -89,74 +89,40 @@ carouselLeft.addEventListener('click', () => handleCarousel(carouselLeft));
 let navOpen = false;
 responsiveNav.addEventListener('click', function () {
     if (!navOpen) {
-        nav.style.position = "fixed";
-        nav.style.zIndex = "2";
-        nav.style.top = "117px";
-        nav.style.right = "0px";
-        nav.style.width = "243px";
+        nav.classList.add('nav-open');
         navtop.style.zIndex = "1";
         navbar.style.opacity = "0";
         contact.style.marginRight = "0";
-        navbarList.style.display = "flex";
-        navbarList.style.marginTop = "60px";
-        navbarList.style.marginRight = "40px";
-        navbarList.style.flexDirection = "column";
-        navbarList.style.alignItems = "center";
-        navbarList.style.justifyContent = "center";
-        li[0].style.paddingBottom = "40px";
-        li[1].style.paddingBottom = "40px";
-        li[2].style.paddingBottom = "40px";
-        li[3].style.paddingBottom = "40px";
-        li[4].style.paddingBottom = "40px";
-        li[5].style.paddingBottom = "40px";
         navOpen = true;
     } else {
-        nav.style.position = ""; 
-        nav.style.zIndex = "";
-        nav.style.top = "";
-        nav.style.right = "";
-        nav.style.width = "";
+        nav.classList.remove('nav-open');
         navbar.style.opacity = "1";
         navtop.style.zIndex = "";
         contact.style.marginRight = "";
-        navbarList.style.display = "";
-        navbarList.style.marginTop = "";
-        navbarList.style.marginRight = "";
-        navbarList.style.flexDirection = "";
-        navbarList.style.alignItems = "";
-        navbarList.style.justifyContent = "";
-        li[0].style.paddingBottom = "";
-        li[1].style.paddingBottom = "";
-        li[2].style.paddingBottom = "";
-        li[3].style.paddingBottom = "";
-        li[4].style.paddingBottom = "";
-        li[5].style.paddingBottom = "";
         navOpen = false;
     }
 });
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault()
+// Ajoute des classes CSS pour le style ci-dessous
+// Avec le JavaScript, tu peux ajouter ou enlever des classes HTML
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
     message.classList.remove('add');
     message.textContent = "";
     message.style.margin = "0";
-    email.style.backgroundColor = "green";
-    email.style.color = "white";
-    email.style.border = "3px solid lightgreen";
     btn.style.backgroundColor = "green";
-
-    if (email.value == "") {
+    if (email.value === "") {
         message.classList.remove('hidden');
-        message.textContent = "Ce champ ne peut pas être vide!";
+        message.textContent = "This can't be empty!";
         message.style.color = "red";
         message.style.marginTop = "10px";
-        email.style.backgroundColor = "#6E86E6";
-        email.style.border = "3px solid red";
+        email.classList.add('email-label');
         btn.style.color = "white";
         btn.style.backgroundColor = "darkred";
     } else if (email.value.indexOf('@') == -1 || email.value.indexOf('@') < 3) {
         message.classList.remove('hidden');
-        message.textContent = "L'adresse e-mail doit contenir au moins 3 caractères avant le '@'!";
+        message.textContent = "Email adress need to have at least three letters/numbers before the '@'!";
         message.style.color = "red";
         message.style.marginTop = "10px";
         email.style.backgroundColor = "#6E86E6";
@@ -164,6 +130,5 @@ form.addEventListener('submit', function (e) {
         btn.style.color = "white";
         btn.style.backgroundColor = "darkred";
     }
-});
-
+})
 
