@@ -103,6 +103,7 @@ confirm.addEventListener("click", function (e) {
 
 burgerMenu.addEventListener('click', function() {
         nav.style.position = "fixed";
+        nav.style.transition = "0.3s ease";
         nav.style.height = "290px";
         ul.style.marginTop = "50px";
         for (let i = 0; i < li.length; i++) {
@@ -113,6 +114,7 @@ burgerMenu.addEventListener('click', function() {
         li[5].style.right = "7px";
         main.style.opacity = "0.2";
         burgerMenu.style.display = "none";
+        burgerMenu.style.cursor = "pointer";
         croix.style.display = "block";
         croix.style.position = "relative";
         croix.style.bottom = "25px";
@@ -131,6 +133,7 @@ croix.addEventListener('click', function() {
         main.style.opacity = "1";
         burgerMenu.style.marginTop = "20px";
         burgerMenu.style.display = "block";
+        croix.style.cursor = "pointer";
         croix.style.display = "none";
     }
 );
