@@ -869,7 +869,7 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     position: fixed;
-    transition: 0.4s ease;
+    transition: 1s ease;
     width: 230px;
     height: 350px;
     right: 0px;
