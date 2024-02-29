@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book your stay</title>
     <link rel="stylesheet" href="../assets/css/style2.css">
 </head>
-
 <body>
-    <header>
+    <div class="container3">
+        <header>
             <nav>
                 <ul>
                     <li class="nav-items"><a href="../index.html" class="Home-a">Home</a></li>
@@ -18,105 +17,99 @@
                     <li class="nav-items"><a href="../index.html" class="Gallerys-a">Gallery</a></li>
                     <li class="nav-items"><a href="../index.html" class="AboutUs-a">About us</a></li>
                     <li class="nav-items"><a href="../index.html" class="Contact-a">Contact</a></li>
-                    <li class="li"><a href="../index.html" class="Book">Book Now</a></li>       
+                    <li class="li"><a href="../index.html" class="Book">Book Now</a></li>
                     <li id="burger-menu"><i class="fa-solid fa-bars"></i></li>
                     <li id="close"><i class="fa-solid fa-circle-xmark"></i></li>
                 </ul>
             </nav>
-    </header>
-    <main>
-        <p class="stay">book your stay</p>
-        <form>
-            <p class="cordonne">Enter your contact details</p>
-            <div class="name-container">
-                <label for="name" class="label-name">Enter your full name </label>
-                <input type="text" name="name" id="name" placeholder="Jules Neveu" />
-            </div>
-            <label for="email" class="label-email">Enter your e-mail</label>
-            <input type="email" name="email" id="email" placeholder="Watch out for typos" />
-            <p class="confi">The confirmation e-mail will be sent to this address</p>
-
-            <label for="number" class="label-number">Enter your phone number *</label>
-            <input type="number" name="number" id="number" placeholder="06 34 67 23 98">
-            <p class="reservation">The establishment needs it to validate your reservation.</p>
-
-            <hr>
-
-            <p class="for"> Who are you booking for ?</p>
-            <div class="much">
-                <div>
-                    <input type="radio" name="checkbox" id="check1">
-                    <label for="check1" class="principal">I am the main customer</label>
+        </header>
+        <main>
+            <p class="stay">book your stay</p>
+            <form>
+                <p class="cordonne">Enter your contact details</p>
+                <div class="name-container">
+                    <label for="name" class="label-name">Enter your full name </label>
+                    <input type="text" name="name" id="name" placeholder="Jules Neveu" />
                 </div>
-                <div>
-                    <input type="radio" name="checkbox" id="check2">
-                    <label for="check2" class="other">I'm booking for another customer</label>
+                <label for="email" class="label-email">Enter your e-mail</label>
+                <input type="email" name="email" id="email" placeholder="Watch out for typos" />
+                <p class="confi">The confirmation e-mail will be sent to this address</p>
+                <label for="number" class="label-number">Enter your phone number *</label>
+                <input type="number" name="number" id="number" placeholder="06 34 67 23 98">
+                <p class="reservation">The establishment needs it to validate your reservation.</p>
+                <hr>
+                <p class="for"> Who are you booking for ?</p>
+                <div class="much">
+                    <div>
+                        <input type="radio" name="checkbox" id="check1">
+                        <label for="check1" class="principal">I am the main customer</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="checkbox" id="check2">
+                        <label for="check2" class="other">I'm booking for another customer</label>
+                    </div>
                 </div>
-            </div>
-        </form>
-
-        <form>
-            <p class="requests">Special requests</p>
-            <p class="desc-requests">Special requests cannot be guaranteed, but we will do our best to accommodate them.
-                You can always make special requests, even after your reservation has been finalized!</p>
-
-            <label for="write-requests" class="write-requests">Please write your requests in English or French *</label>
-            <textarea name="write-requests" id="write-requests" rows="5"></textarea>
-
-            <input type="checkbox" name="checkbox" id="check2">
-            <label for="check2" class="other">I would like the rooms to be next door (if possible)</label>
-        </form>
-
-        <form>
-            <p class="arrival">Your arrival time</p>
-            <div class="arrival-txt">
-                <p><i class="fa-solid fa-check" style="color: #6e86e6;"></i>Check-in for your accommodation will open at
-                    2pm.</p>
-                <p><i class="fa-solid fa-person-military-pointing" style="color: #6e83e6;"></i>24-hour reception - Help
-                    is always at hand!</p>
-
-                <label for="estimated" class="estimated">Add your estimated time of arrival *</label>
-
-                <select name="hour" id="estimated">
-                    <option value="selc" class="selec"> Please choose </option>
-                    <option value="idk">I don't know</option>
-                    <option value="0">0h00 - 1h00</option>
-                    <option value="1">1h00 - 2h00</option>
-                    <option value="2">2h00 - 3h00</option>
-                    <option value="3">3h00 - 4h00</option>
-                    <option value="4">4h00 - 5h00</option>
-                    <option value="5">5h00 - 6h00</option>
-                    <option value="6">6h00 - 7h00</option>
-                    <option value="7">7h00 - 8h00</option>
-                    <option value="8">8h00 - 9h00</option>
-                    <option value="9">9h00 - 10h00</option>
-                    <option value="10">10h00 - 11h00</option>
-                    <option value="11">11h00 - 12h00</option>
-                    <option value="12">12h00 - 13h00</option>
-                    <option value="13">13h00 - 14h00</option>
-                    <option value="14">14h00 - 15h00</option>
-                    <option value="15">15h00 - 16h00</option>
-                    <option value="16">16h00 - 17h00</option>
-                    <option value="17">17h00 - 18h00</option>
-                    <option value="18">18h00 - 19h00</option>
-                    <option value="19">19h00 - 20h00</option>
-                    <option value="20">20h00 - 21h00</option>
-                    <option value="21">21h00 - 22h00</option>
-                    <option value="22">22h00 - 23h00</option>
-                </select>
-                <div>
-                    <a href="#" class="submit">Submit Now !</a>
-                </div>
-        </form>
-        <div class="notif">
-            <i class="fa-solid fa-check notif-check" style="color: #6E86E6;"></i>
-            <h3 class="thanks">Thanks You For Your Purchase !</h3>
-            <p class="txt-thank">All payment information will be sent to you by email.</p>
-        </div>
-    </main>
-
+            </form>
+            <form>
+                <p class="requests">Special requests</p>
+                <p class="desc-requests">Special requests cannot be guaranteed, but we will do our best to accommodate
+                    them.
+                    You can always make special requests, even after your reservation has been finalized!</p>
+                <label for="write-requests" class="write-requests">Please write your requests in English or French
+                    *</label>
+                <textarea name="write-requests" id="write-requests" rows="5"></textarea>
+                <input type="checkbox" name="checkbox" id="check3">
+                <label for="check2" class="other">I would like the rooms to be next door (if possible)</label>
+            </form>
+            <form>
+                <p class="arrival">Your arrival time</p>
+                <div class="arrival-txt">
+                    <p><i class="fa-solid fa-check" style="color: #6E86E6;"></i>Check-in for your accommodation will
+                        open at
+                        2pm.</p>
+                    <p><i class="fa-solid fa-person-military-pointing" style="color: #6E83E6;"></i>24-hour reception -
+                        Help
+                        is always at hand!</p>
+                    <label for="estimated" class="estimated">Add your estimated time of arrival *</label>
+                    <select name="hour" id="estimated">
+                        <option value="selc" class="selec"> Please choose </option>
+                        <option value="idk">I don't know</option>
+                        <option value="0">0h00 - 1h00</option>
+                        <option value="1">1h00 - 2h00</option>
+                        <option value="2">2h00 - 3h00</option>
+                        <option value="3">3h00 - 4h00</option>
+                        <option value="4">4h00 - 5h00</option>
+                        <option value="5">5h00 - 6h00</option>
+                        <option value="6">6h00 - 7h00</option>
+                        <option value="7">7h00 - 8h00</option>
+                        <option value="8">8h00 - 9h00</option>
+                        <option value="9">9h00 - 10h00</option>
+                        <option value="10">10h00 - 11h00</option>
+                        <option value="11">11h00 - 12h00</option>
+                        <option value="12">12h00 - 13h00</option>
+                        <option value="13">13h00 - 14h00</option>
+                        <option value="14">14h00 - 15h00</option>
+                        <option value="15">15h00 - 16h00</option>
+                        <option value="16">16h00 - 17h00</option>
+                        <option value="17">17h00 - 18h00</option>
+                        <option value="18">18h00 - 19h00</option>
+                        <option value="19">19h00 - 20h00</option>
+                        <option value="20">20h00 - 21h00</option>
+                        <option value="21">21h00 - 22h00</option>
+                        <option value="22">22h00 - 23h00</option>
+                    </select>
+                    <div>
+                        <a href="#" class="submit">Submit Now !</a>
+                    </div>
+            </form>
+    </div>
+    <div class="notif">
+        <i class="fa-solid fa-check notif-check" style="color: #6E86E6;"></i>
+        <h3 class="thanks">Thanks You For Your Purchase !</h3>
+        <p class="txt-thank">All payment information will be sent to you by email.</p>
+    </div>
+</main>
     <script src="https://kit.fontawesome.com/474b53fd86.js" crossorigin="anonymous"></script>
     <script src="../assets/js/script2.js"></script>
 </body>
-
 </html>

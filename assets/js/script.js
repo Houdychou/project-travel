@@ -64,7 +64,7 @@ const IMAGES = [
         "src": "assets/img/pyramid.png",
         "city-name": "Cairo",
         "endroit-carrousel": "Pyramid",
-        "description": "Iconic structures, ancient wonders, monumental tombs, architectural marvels in Egypt.",
+        "description": "Iconic structures, monumental tombs, architectural marvels in Egypt.",
     }
 ]
 let currentImageIndex = 0;
@@ -104,32 +104,31 @@ responsiveNav.addEventListener('click', function () {
     }
 });
 
-// Ajoute des classes CSS pour le style ci-dessous
-// Avec le JavaScript, tu peux ajouter ou enlever des classes HTML
-
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     message.classList.remove('add');
+    btn.classList.remove('btn-valid');
+    email.classList.remove('email-label');
+    email.classList.remove('message-valid');
     message.textContent = "";
-    message.style.margin = "0";
-    btn.style.backgroundColor = "green";
     if (email.value === "") {
         message.classList.remove('hidden');
         message.textContent = "This can't be empty!";
-        message.style.color = "red";
-        message.style.marginTop = "10px";
+        message.classList.add('message-js');
         email.classList.add('email-label');
-        btn.style.color = "white";
-        btn.style.backgroundColor = "darkred";
+        btn.classList.add('btn-js');
+        btn.style.marginTop = "0px";
     } else if (email.value.indexOf('@') == -1 || email.value.indexOf('@') < 3) {
         message.classList.remove('hidden');
         message.textContent = "Email adress need to have at least three letters/numbers before the '@'!";
-        message.style.color = "red";
-        message.style.marginTop = "10px";
-        email.style.backgroundColor = "#6E86E6";
-        email.style.border = "3px solid red";
-        btn.style.color = "white";
-        btn.style.backgroundColor = "darkred";
+        message.classList.add('message-js');
+        email.classList.add('email-label');
+        btn.classList.add('btn-js');
+        btn.style.marginTop = "0px";
+    } else {
+        btn.classList.add('btn-valid');
+        email.classList.add('message-valid');
+        message.classList.remove('message-js');
     }
 })
 

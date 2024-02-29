@@ -123,8 +123,8 @@ h1 {
     margin: 100px 0px 0px 0px;
     text-align: center;
     color: white;
-    width: 25%;
-    font-size: 50px;
+    width: 650px;
+    font-size: 70px;
 }
 
 .glass {
@@ -553,8 +553,8 @@ span {
 }
 
 .lightbox-img {
-    border-radius: 3px;
-    height: 850px;
+    border-radius: 10px;
+    height: 750px;
     width: 700px;
 }
 
@@ -793,6 +793,7 @@ form {
 
 .email {
     transition: 1s ease;
+    font-family: Space Grotesk;
     width: 70%;
     padding: 10px;
     background-color: #D9D9D9;
@@ -809,11 +810,10 @@ form p {
 }
 
 input[type="submit"] {
-    background-color: transparent;
-    color: white;
     border: 1px solid white;
+    font-family: Space Grotesk;
     width: 70%;
-    margin-top: 40px;
+    margin-top: 30px;
     border-radius: 30px;
     padding: 10px;
     -webkit-transition: 1s ease;
@@ -821,9 +821,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     cursor: pointer;
-    transition: 1s ease;
-    background-color: #6E86E6;
-    color: white;
+    transition: 0.3s ease;
 }
 
 .hidden {
@@ -866,18 +864,13 @@ input[type="submit"]:hover {
     background-color: #FFFFFF;
 }
 
-.email-label {
-    background-color: white;
-    border: 3px solid red;
-}
-
 .nav-open {
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    width: 180px;
-    height: 270px;
+    width: 230px;
+    height: 350px;
     right: 0px;
     top: 100px;
 }
@@ -895,7 +888,38 @@ input[type="submit"]:hover {
 }
 
 .nav-open li {
-    padding-top: 10px;
+    font-size: 20px;
+    padding-top: 25px;
+}
+
+.message-js {
+    color: red;
+    margin-top: 10px;
+}
+
+.btn-js {
+    color: white;
+    background-color: red;
+}
+
+.message-valid {
+    border: 3px solid green;
+    margin: 0;
+}
+
+.btn-valid {
+    color: white;
+    background-color: forestgreen;
+}
+
+.email-label {
+    background-color: white;
+    border: 3px solid red;
+}
+
+.email-valid {
+    background-color: green;
+    border: lightgreen;
 }
 
 /* TABLETTES */
@@ -1106,18 +1130,12 @@ input[type="submit"]:hover {
         display: none;
     }    
 
-    .navbar h3 {
-        font-size: 40px;
-        width: 100%;
-    }
-
     .navbar p {
         font-size: 23px;
         width: 100%;
     }
 
     .navtop .fa-bars {
-        bottom: 15px;
         position: absolute;
         right: 10px;
         display: inline-block;
@@ -1131,6 +1149,12 @@ input[type="submit"]:hover {
 
     .nav {
         height: 0px;
+    }
+
+    .navbar h3 {
+        margin-top: 200px;
+        width: 425px;
+        font-size: 40px;
     }
 
     .navtop .phone {
@@ -1171,18 +1195,18 @@ input[type="submit"]:hover {
     .Ideas img {
         border-bottom-left-radius: 0%;
         border-top-right-radius: 5px;
-        width: 95%;
+        width: 400px;
     }
 
     .txt1 {
         padding-right: 10px;
-        width: 95%;
+        width: 400px;
     }
 
     .txt2 {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        width: 95%;
+        width: 400px;
     }
 
     .info {

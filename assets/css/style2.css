@@ -1,23 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
-
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: Space Grotesk;
 }
-
 body {
     position: relative;
     margin: 0;
     overflow-x: hidden;
 }
-
 main {
     margin-top: 130px;
 }
-
 nav {
     width: 100%;
     background-color: #D9D9D9;
@@ -29,11 +25,9 @@ nav {
     padding-bottom: 8px;
     padding-right: 16px;
 }
-
 nav ul {
     display: flex;
 }
-
 nav li {
     text-decoration: none;
     color: white;
@@ -41,13 +35,11 @@ nav li {
     list-style: none;
     text-transform: uppercase;
 }
-
 nav li a {
     -webkit-transition: 1s ease;
     color: #213641;
     text-decoration: none;
 }
-
 nav .Book {
     font-family: AbeeZee;
     padding: 13px;
@@ -55,15 +47,13 @@ nav .Book {
     border-radius: 20px;
     background-color: #6E86E6;
 }
-
 nav .Book:hover {
-    color: #39439a;
+    color: #39439A;
     transition: 1s ease;
     background-color: transparent;
     border: 1px solid white;
     border-radius: 20px;
 }
-
 .stay {
     font-family: Titan One;
     font-size: 55px;
@@ -72,18 +62,15 @@ nav .Book:hover {
     margin-bottom: 40px;
     color: #213641;
 }
-
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 label {
     display: block;
 }
-
 form {
     border: 1px solid #213641;
     border-radius: 5px;
@@ -91,7 +78,6 @@ form {
     width: 38%;
     margin-bottom: 20px;
 }
-
 .cordonne,
 .for,
 .requests,
@@ -103,65 +89,53 @@ form {
     margin-top: 0;
     color: #213641;
 }
-
 #name {
     margin-bottom: 20px;
 }
-
 .confi,
 .reservation {
     font-size: 13px;
     margin-top: 3px;
 }
-
 #write-requests {
     width: 100%;
     border-radius: 5px;
 }
-
 .principal,
 .other {
     display: inline;
 }
-
 input[type="checkbox"] {
     transform: scale(1.2);
 }
-
 #check1 {
     margin-bottom: 10px;
 }
-
 .write-requests,
 .estimated {
     margin-bottom: 10px;
 }
-
 .arrival-txt {
     display: inline;
 }
-
 .fa-check, .fa-bars, .fa-person-military-pointing {
     font-size: 20px;
     margin-right: 10px;
-    border: 3px #6e86e6 solid;
+    border: 3px #6E86E6 solid;
     padding: 10px;
     border-radius: 10%;
-    background-color: #c1cbf4;
+    background-color: #C1CBF4;
 }
-
 .fa-circle-xmark {
     font-size: 50px;
     color: black;
     padding: 10px;
     border-radius: 50%;
 }
-
 select {
     width: 60%;
     font-size: 15px;
 }
-
 select,
 input[type="text"],
 input[type="number"],
@@ -171,10 +145,9 @@ input[type="email"] {
     font-size: 15px;
     width: 60%;
 }
-
 .submit {
-    border: 3px #6e86e6 solid;
-    background-color: #c1cbf4;
+    border: 3px #6E86E6 solid;
+    background-color: #C1CBF4;
     text-decoration: none;
     color: white;
     list-style: none;
@@ -188,16 +161,15 @@ input[type="email"] {
     padding-bottom: 10px;
     padding-top: 10px;
 }
-
 .notif {
     border: 3px #6E86E6 solid;
     padding: 25px;
     background:rgba(255,255,255,.9);
     text-align: center;
     border-radius: 10px;
-    width: 20%;
-    position: absolute;
-    bottom: 500px;
+    width: 400px;
+    position: fixed;
+    bottom: 250px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     display: none;
 }
@@ -206,28 +178,26 @@ input[type="email"] {
     font-size: 60px;
     padding: 20px;
 }
-
 .txt-check, .thanks {
     font-size: 35px;
 }
 
+.txt-thank {
+    font-size: 25px;
+}
 @media screen and (min-width: 1024px) {
     form {
         width: 50%;
     }
-
     nav li:nth-child(6) {
         margin-right: auto;
     }
-
     #burger-menu {
         display: none;
     }
-
     #close {
         display: none;
     }
-
     nav {
         width: 100%;
         height: 80px;
@@ -235,29 +205,23 @@ input[type="email"] {
         z-index: 1;
         margin-top: 0;
     }
-
     ul li {
         color: white;
     }
 }
-
 @media screen and (max-width: 1024px) {
     form {
         width: 70%;
     }
-
     #burger-menu {
         display: none;
     }
-
     #close {
         display: none;
     }
-
     .stay {
         font-size: 35px;
     }
-
     nav {
         display: flex;
         justify-content: center;
@@ -267,50 +231,39 @@ input[type="email"] {
         border-bottom: 2px solid #6E86E6;
         z-index: 1;
     }
-
     ul {
         flex-direction: row;
         justify-content: center;
         align-items: center;
         display: flex;
     }
-
     li {
         padding-bottom: 10px;
     }
-
     .Contact-a {
         margin-left: 14px;
     }
-
     .Book {
         display: none;
     }
-
     ul li {
         color: white;
     }
 }
-
-
 @media screen and (max-width: 655px) {
     form {
         width: 90%;
     }
-
     .nav-items {
         display: none;
     }
-
     ul {
         display: flex;
         flex-direction: column;
     }
-
     #burger-menu {
         display: block;
     }
-
     #close {
         display: none;
     }
